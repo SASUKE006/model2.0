@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{% block title %}唐三彩-马{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+	<style>
+	</style>
+</head>
+<body>
+
+
+	<img id="music" src="{% static 'img/music.png' %}">
+	<audio id="audio"  preload="auto"  loop="loop" hidden="hidden" src="{% static 'music/m.mp3' %}"></audio>
+	<div id="WebGL-output">
+		
+		<div id="text"></div>
+
+		<div id="videoContent">	</div>		
+{#		<video id="video" controls="controls" src="mp4.mp4"></video>#}
+
+		<img id="closebtn" src="{% static 'img/close.png' %}" />
+		<img id="playbtn" src="{% static 'img/btn_on_play.png' %}" />
+		<p id="dname" style="display: none">{{ base_name }}</p>
+		<p id="d_models"  style="display: none">{{ path }}</p>
+        <p id="d_obj"  style="display: none">{{ obj_path }}</p>
+
+
+		<img id="print3d" src="{% static 'img/print3d.png' %}" />
+		<img id="roll" src="{% static 'img/roll.png' %}" />
+		<img id="videoIcon" src="{% static 'img/video.png' %}" />
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'download' book_id %}" target="_blank" id="dow" title="{{ book.model_name }}"><img id="roll" src="{% static 'img/roll.png' %}" />下载</a>
+{#   http://127.0.0.1:8000/media/{{ book.there_file }}#}
+    {% endif %}
+	</div>
+
+
+	
+	<script type="text/javascript" src="{% static 'js/three.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/OBJLoader.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/MTLLoader.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/TrackballControls.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-1.8.3.js' %}" ></script>
+
+	<script>
+		var modelName = $('#dname').text();
+		var modelPath = $('#d_models').text();
+		var obj_modelPath = $('#d_obj').text();
+	</script>
+
+	<script type="text/javascript" src="{% static 'js/test.js' %}" ></script>
+
+</body>
+</html>

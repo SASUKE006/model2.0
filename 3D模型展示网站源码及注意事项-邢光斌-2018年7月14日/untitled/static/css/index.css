@@ -1,0 +1,109 @@
+	body {
+		/* set margin to 0 and overflow to hidden, to go fullscreen */
+		margin: 0;
+		overflow: hidden;
+	}
+	
+	#text{
+		position: absolute;
+	    width: 100%;
+	    height: 20%;
+	    top: 40%;
+	    opacity: 0.6;
+	    text-align: center;
+	    font-size: xx-large;
+	    color: #000000;
+	}
+	#music{
+		position: absolute;
+	    width: 10%;		    
+	    right: 5%;
+	    top: 5%;
+	    opacity: 0;
+	}	
+	
+	#print3d{
+		position: absolute;
+	    width: 10%;		    
+	    left: 5%;
+	    bottom: 4%;
+	}
+	
+	#roll{
+		position: absolute;
+	    width: 10%;		    
+	    left: 20%;
+	    bottom: 3.8%;		
+	}
+	#videoIcon{
+				position: absolute;
+	    width: 12%;		    
+	    left: 35%;
+	    bottom: 3.8%;	
+		}
+
+	#dow{
+		position: absolute;
+	    width: 12%;
+	    left: 60%;
+	    bottom: 3.8%;
+		}
+		
+	#videoContent{
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    
+	    background-color: #222222;		
+	    opacity: 0.8;
+	    
+	    display: none;    
+	    			
+	}
+	#closebtn{
+		position: absolute;
+		top: 20%;
+		left: 45%;
+		width: 13%;
+	    display: none; 		
+	}
+	
+	#video{
+		position: absolute;
+		top: 30%;
+		width: 100%;
+	    display: none; 
+	}
+	
+	#playbtn{
+		position: absolute;
+		top: 40%;
+		
+		width: 100%;
+	    display: none; 	
+	}
+	
+	/*音乐图标*/
+	
+	.music_Ani {
+		-webkit-animation: music_Ani 2s linear infinite;
+		animation: music_Ani 2s linear infinite;
+		
+	}
+	
+	@keyframes music_Ani {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}	
+	@-webkit-keyframes music_Ani {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}

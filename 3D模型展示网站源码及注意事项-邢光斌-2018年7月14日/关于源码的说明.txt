@@ -1,0 +1,25 @@
+网站部署的源码已经传到了GitHub上，可以直接使用，
+
+地址：https://github.com/786183994/3DModel
+
+
+
+网站搭建要求：
+服务器（除轻量级服务器外的其它服务器）系统建议使用 CentOS 系统
+mysql5.6及以上版本
+python==2.7
+Django==1.9
+
+
+
+
+注意：
+网站部署教程：
+https://www.zmrenwu.com/post/20/  服务器使用Nginx和Gunicorn部署Django
+
+https://blog.csdn.net/qq_32846595/article/details/71149312  本地项目上传到github上
+
+https://www.cnblogs.com/zhuhaichan/p/8493217.html   服务器yum的update
+
+
+网站搭建完成后使用教程见“附件”中的视频操作。
